@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	background-color: #635854;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-bottom: 4px solid #3596F5;
+}
+
+.navbar {
+	max-width: 1280px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-menu{
+	margin: 0;		/*отключить внешние отступы*/
+	padding: 0;		/*отключить внутренние отступы*/
+	list-style: none;	/*отключить нумеровку листа*/
+	display: flex;
+	text-align: center;
+}
+
+.navbar-item {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.navbar-link {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+}
+
+.navbar-contacts {
+	text-align: right;
+}
+
+.navbar-text {
+	display: block;
+	color: #fff;
+	margin-bottom: 4px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.navbar-phone {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.main {
+	max-width: 1280px;
+	margin: auto;
+	padding-top: 74px;
+	padding-bottom: 79px;
+	display: flex;
+}
+
+.main-info {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	justify-content: space-between;
+}
+
+.home-img path {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.home-img path:hover {
+	opacity: 1;
+}
+
+path.current-floor {
+	opacity: 1;
+}
+
+.main-title {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: normal;
+	font-size: 37px;
+	line-height: 44px;
+	text-transform: uppercase;
+	color: #635854;
+	margin-top: 48px;
+}
+
+.counter-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.counter-btn {
+	cursor: pointer;
+	background-color: #fff;
+	border: none;
+}
+
+.counter {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: normal;
+	font-size: 116px;
+	color: #635854;
+}
+
+.arrow-down {
+	transform: rotateX(180deg);
+}
+
+.btn-primary {
+	background: #3596F5;
+	border-radius: 6px;
+	color: #fff;
+	border: none;
+	padding: 16px 36px;
+	cursor: pointer;
+	margin-bottom: 87px;
+}
+
+.footer {
+	padding-top: 50px;
+	padding-bottom: 56px;
+	background-color: #D7D7D7;
+	border-top: solid 4px #3596F5;
+}
+.footer-main {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer-sources {
+	max-width: 427px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer-contacts {
+	text-align: left;
+}
+.footer-text {
+	display: block;
+	color: #635854;
+	margin-bottom: 4px;
+	font-size: 14px;
+	line-height: 16px;
+}
+.footer-phone {
+	color: #635854;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+.social + a  {
+	margin-left: 11.03px;
+}
+.footer-link {
+	color: #635854;
+	font-size: 16px;
+}
+
+.footer-link + .footer-link {
+	margin-left: 20px;
+}
+
+.modal {
+	position: fixed; /*fix above all elements*/
+	left: 0;
+	top: 0; /*приклейка на верх-право*/
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);  /*полупрозрачный фоновый черный*/
+	display: flex; /* родительский элемент гибкий (для model-dialog)*/
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+	transition: opacity 0.2s;
+}
+
+.is-open {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.flats path {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.flats path:hover {
+	opacity: 1;
+}
+
+.modal-dialog {
+	position: relative;
+	max-width: 1000px;
+	min-height: 565px;
+	background-color: #fff;
+	flex-grow: 1;
+	display: flex;
+}
+
+.modal-image {
+	background-color: #ebebeb;
+	width: 60%; /*60% от род, элемента (modal-dialog)*/
+	text-align: center;
+	padding: 50px;
+}
+.modal-title {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 29px;
+	text-transform: uppercase;
+	margin-top: 0;
+}
+
+.modal-info {
+	width: 40%;
+	padding: 50px 46px;
+}
+
+
+.flat-list {
+	padding: 0;	
+	list-style: none;
+	margin-top: 55px;
+}
+.flat-item {
+	margin-bottom: 10px;
+}
+.flat-link {
+	font-size: 16px;
+	line-height: 19px;
+	color: #635854;
+	text-decoration: none;
+}
+
+.flat-link:hover {
+	text-decoration-line: underline;
+	color: #3596F5;
+}
+
+.flat-link-wanted {
+	text-decoration-line: underline;
+	color: #3596F5;
+}
+
+path.current-apartment {
+	opacity: 1;
+}
+
+.modal-alert {
+	font-style: italic;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #635854;
+	margin-top: 56px;
+}
+
+.modal-close-btn {
+	position:absolute;
+	right: 27px;
+	top: 38px;
+	cursor: pointer;
+	border: none;
+	background-color: #fff;
+}
